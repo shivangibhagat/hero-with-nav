@@ -1,0 +1,96 @@
+.hero-banner {
+  min-height: 800px;
+  .carousel-item {
+    min-height: 800px;
+    .slide {
+      min-height: inherit;
+      @include MQ(MQ-768) {
+        padding-top: 118px;
+        align-items: flex-start !important;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    width: 76%;
+    margin: 0 0 52px;
+    min-height: 554px;
+    padding: 30px 30px 30px 208px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 910px;
+      height: 100%;
+      background: $color-black;
+      left: 0;
+      z-index: -1;
+      clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%);
+      opacity: 0.6;
+      top: 0;
+    }
+    @include MQ(MQ-1520) {
+      padding: 30px 30px 30px 60px;
+    }
+    @include MQ(MQ-1440) {
+      &::before {
+        width: 710px;
+      }
+    }
+    @include MQ(MQ-980) {
+      min-height: 350px;
+      &::before {
+        width: 550px;
+        clip-path: polygon(0 0, 100% 0, 30% 100%, 0 100%);
+      }
+    }
+    @include MQ(MQ-768) {
+      min-height: 258px;
+      padding: 40px 20px 20px;
+      margin: 0;
+      width: 100%;
+      &::before {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+      }
+    }
+  }
+  .image-section {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $color-black;
+    }
+    img {
+      @include img-object-cover;
+      position: relative;
+    }
+  }
+}
+.carousel-control-nav {
+  bottom: 80px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 80px;
+  button {
+    position: relative;
+    opacity: 0.75;
+    width: 40px;
+    height: 20px;
+    &.carousel-control-prev {
+      transform: rotate(-180deg);
+      margin-right: 8px;
+    }
+  }
+  @include MQ(MQ-768) {
+    padding-right: 15px;
+    justify-content: center;
+  }
+}

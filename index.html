@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom Style -->
+    <link href="assets/custom.css" rel="stylesheet" media="screen">
+
+    <title>ARCTIT</title>
+</head>
+
+<body id="body">
+    <div class="cursor">
+        <div class="cursor__ball">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+    <header>
+        <div class="container-1850 d-flex align-items-center justify-content-between">
+            <div class="logo relative image-section">
+                <a href="#" title="ARCTIT" class="hoverable">ARCTIT<img src="assets/logo.png" alt="ARCTIT"></a>
+            </div>
+            <nav>
+                <button class="hoverable navbar-toggler" onclick="toggleActive()" type="button"
+                    aria-label="Toggle navigation">
+                    <span id="navbar-toggler-icon">
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <div class="navbarCollapse" id="navbarToggler">
+                    <div class="navbarCollapseOverlay"></div>
+                    <div class="container-1850">
+                        <ul class="navbar-nav me-auto mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link active hoverable" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hoverable" href="#"> About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hoverable" href="#"> Services </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hoverable" href="#"> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero-banner relative">
+            <div id="carouselHeroSlider" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="d-flex align-items-end slide container-1850">
+                            <div class="image-section">
+                                <img src="assets/hero-banner-img.png" class="d-block w-100" alt="">
+                            </div>
+                            <div class="content d-flex align-items-center">
+                                <h1 class="uppercase">Build with next generation of architect</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="d-flex align-items-end slide container-1850">
+                            <div class="image-section">
+                                <img src="assets/hero-banner-img.png" class="d-block w-100" alt="">
+                            </div>
+                            <div class="content d-flex align-items-center">
+                                <h1 class="uppercase">Build with next generation of architect</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-end slide container-1850">
+                            <div class="image-section">
+                                <img src="assets/hero-banner-img.png" class="d-block w-100" alt="">
+                            </div>
+                            <div class="content d-flex align-items-center">
+                                <h1 class="uppercase">Build with next generation of architect</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-control-nav relative container-1850">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeroSlider"
+                        data-bs-slide="prev">
+                        <img src="assets/icon-right.svg" alt="Previous">
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselHeroSlider"
+                        data-bs-slide="next">
+                        <img src="assets/icon-right.svg" alt="Next">
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer> </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom Script -->
+    <script src="assets/custom.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+$font-family-primary: "Roboto", sans-serif;
+
+/* Colors */
+$color-black: #000000;
+$color-white: #ffffff;
+
+/** breakpoints
+1920
+1440
+1024
+980
+768
+630
+600
+480
+350
+**/
+$MQ-350: 350px;
+$MQ-480: 480px;
+$MQ-600: 600px;
+$MQ-768: 768px;
+$MQ-980: 980px;
+$MQ-1024: 1024px;
+$MQ-1200: 1200px;
+$MQ-1280: 1280px;
+$MQ-1440: 1440px;
+$MQ-1520: 1520px;
+$MQ-1920: 1920px;
+/** media queries **/
+@mixin MQ($canvas) {
+  @if $canvas==MQ-350 {
+    @media only screen and (max-width: $MQ-350) {
+      @content;
+    }
+  } @else if $canvas==MQ-480 {
+    @media only screen and (max-width: $MQ-480) {
+      @content;
+    }
+  } @else if $canvas==MQ-600 {
+    @media only screen and (max-width: $MQ-600) {
+      @content;
+    }
+  } @else if $canvas==MQ-768 {
+    @media only screen and (max-width: $MQ-768) {
+      @content;
+    }
+  } @else if $canvas==MQ-980 {
+    @media only screen and (max-width: $MQ-980) {
+      @content;
+    }
+  } @else if $canvas==MQ-1024 {
+    @media only screen and (max-width: $MQ-1024) {
+      @content;
+    }
+  } @else if $canvas==MQ-1200 {
+    @media only screen and (max-width: $MQ-1200) {
+      @content;
+    }
+  } @else if $canvas==MQ-1280 {
+    @media only screen and (max-width: $MQ-1280) {
+      @content;
+    }
+  } @else if $canvas==MQ-1440 {
+    @media only screen and (max-width: $MQ-1440) {
+      @content;
+    }
+  } @else if $canvas==MQ-1520 {
+    @media only screen and (max-width: $MQ-1520) {
+      @content;
+    }
+  } @else if $canvas==MQ-1920 {
+    @media only screen and (max-width: $MQ-1920) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $canvas) {
+      @content;
+    }
+  }
+}
+
+/* Images */
+@mixin img-object-cover {
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@mixin img-object-contain {
+  position: absolute;
+  object-fit: contain;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.container-1850 {
+  max-width: 1850px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+  @include MQ(MQ-768) {
+    padding: 0 15px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+h1,
+.h1 {
+  font: normal normal 900 90px/109px $font-family-primary;
+  letter-spacing: 5.4px;
+  color: $color-white;
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 0;
+  @include MQ(MQ-1440) {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  @include MQ(MQ-980) {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 3.4px;
+  }
+  @include MQ(MQ-768) {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2.4px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.cursor {
+  pointer-events: none;
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    circle {
+      fill: #f7f8fa;
+    }
+  }
+  @include MQ(MQ-768) {
+    display: none;
+  }
+}
